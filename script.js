@@ -32,7 +32,7 @@ const people = [
     ]
 ];
 
-function search() {
+function searchName() {
     let name = document.getElementById('student_name').value;
     for(let i=0; i<people.length; i++) {
        for(let k=0; k<people[i][3].length; k++) {
@@ -44,5 +44,5 @@ function search() {
             }
         }
     }
-});
+};
 

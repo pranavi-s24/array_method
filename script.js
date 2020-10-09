@@ -21,6 +21,7 @@ const people = [
         principal = "Joseph Morgan",
         supervisor = "Natanielle Buzz",
         teacher = "Maize Williams",
+
         students = ["Hayley","Rebecca","Davina"]
     ],
     [
@@ -31,10 +32,9 @@ const people = [
     ]
 ];
 
-let search = document.querySelector('button');
-
-search.addEventListener("click",() => {
-    var name = document.getElementById('student_name').value;
+let button = document.getElementById('search')
+button.addEventListener("click",() => {
+    let name = document.getElementById('student_name').value;
     for(let i=0; i<people.length; i++) {
        for(let k=0; k<people[i][3].length; k++) {
             if(people[i][3][k] == name) {
@@ -42,9 +42,6 @@ search.addEventListener("click",() => {
                 document.getElementById("supervisor").innerHTML =  people[i][1];
                 document.getElementById("teacher").innerHTML =  people[i][2];
                 document.getElementById("students").innerHTML =  people[i][3];
-            }
-            else {
-                alert("Name not found");
             }
         }
     }
